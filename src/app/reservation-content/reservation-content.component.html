@@ -1,34 +1,38 @@
 
    <div id="reservatrion">
-    <form>
+    <form [formGroup]="SearchForm">
    <section class="container">
         <div class="bg-light shadow-md rounded p-4">
             <div mat-dialog-content>
                 <h2 mat-dialog-title >Search and Book Rooms</h2>
-                <mat-form-field appearance="outline" [style.width.px]=412>
-                  <mat-select placeholder="ROOMS CATEGARY" >
-                    <mat-option value="option">Karachi</mat-option>
-                    <mat-option value="option">Lahore</mat-option>
-                    <mat-option value="option">Multan</mat-option>
-                    <mat-option value="option">Faslabad</mat-option>
+                <mat-form-field appearance="outline" [style.width.px]=412   >
+                  <mat-select placeholder="ROOMS CATEGARY" [formControl] ="CategoryId"  >
+               
+
+                    <mat-option  *ngFor="let cat of category"  [value]="cat.typeId"   >{{cat.title}} - {{cat.typeId}}</mat-option>
+
                   </mat-select>
                 </mat-form-field>
+
+    
           
             <br>
             <mat-form-field appearance="outline" [style.width.px]=200>
                 <mat-label>Check In</mat-label>
-                <input matInput [matDatepicker]="picker1">
+                <input matInput [matDatepicker]="picker1" formControlName="fromDate">
                 <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
                 <mat-datepicker #picker1></mat-datepicker>
               </mat-form-field>          
               <mat-form-field appearance="outline" [style.width.px]=200>
                 <mat-label>Check Out</mat-label>
-                <input matInput [matDatepicker]="picker2">
+                <input matInput [matDatepicker]="picker2" formControlName="toDate">
                 <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
                 <mat-datepicker #picker2></mat-datepicker>
               </mat-form-field>    
               
               <br>
+
+              <button (click)="FetchRooms()" type="button" class="btn btn-primary">test btn</button>
               <a  routerLink="/Serchbutton" class="btn btn-primary btn-block uppercase" type="submit" >Search</a>
             </div>
         </div>
