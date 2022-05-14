@@ -1,0 +1,15 @@
+.sinupfrom {
+    text-align: center;
+    padding-top: 15px;
+}
+.singup-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    align-items: center;
+    
+  }
+  .singup-full-width {
+    width: 100%;
+    
+  }
