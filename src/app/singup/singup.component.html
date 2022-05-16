@@ -5,11 +5,12 @@
                 <mat-form-field class="singup-full-width" appearance="outline">
                     <mat-label>First Name</mat-label>
                     <input placeholder="First Name" formControlName="firstName" matInput type="text" id="firstName" name="firstName" class="formcontrol" required minlength="4" >
-                <span 
+                <!-- <span 
                 class="text-danger" 
                 *ngIf="signUpForm.get('firstName')?.errors && 
                 signUpForm.get('firstName')?.errors"
-            > Please enter username</span>     </mat-form-field>
+            > Please enter username</span>     -->
+         </mat-form-field>
                 <mat-form-field class="singup-full-width"  appearance="outline">
                     <mat-label>Last Name</mat-label>
                     <input placeholder="Last Name" formControlName="lastName"  matInput type="text">
@@ -31,7 +32,7 @@
 
                 <mat-form-field class="singup-full-width"  appearance="outline">
                     <mat-label>Email</mat-label>
-                    <input placeholder="Ex.inov@example.com" formControlName="email"  matInput type="email">
+                    <input placeholder="Ex.inov@example.com" formControlName="email" name="email" matInput type="email">
                 </mat-form-field>
                 
                 <mat-form-field class="singup-full-width"   appearance="outline">

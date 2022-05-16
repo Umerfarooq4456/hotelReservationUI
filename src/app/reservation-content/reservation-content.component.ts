@@ -35,10 +35,6 @@ export class ReservationContentComponent implements OnInit {
     /// it runs as the component load!!
     this.GetRoomCategory()
 
-  
-
-
-
   }
 
   GetRoomCategory(){

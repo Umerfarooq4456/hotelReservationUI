@@ -23,6 +23,12 @@ export class SingupComponent implements OnInit {
 
   ngOnInit(): void {
 
+    const control = new FormControl('bad@', Validators.email);
+
+    console.log(control.errors);
+    
+
+
     this.signUpForm = this.formBuilder.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
@@ -51,10 +57,10 @@ console.error("invalid form")
     axios.post(environment.BaseURL + 'PostAccount',
     this.signUpForm.value,
     )
-      .then(function (zayn) {
+      .then(function (singup) {
         console.warn("succesful");
 
-        console.error(zayn)
+        console.error(singup)
       })
       .catch(function (error) {
         console.log(error);
