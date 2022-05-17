@@ -22,6 +22,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core'; 'angular/material.core';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { SerchbuttonComponent } from './serchbutton/serchbutton.component';
+import { RoomGridComponent } from './room-grid/room-grid.component';
+
 
 
 
@@ -44,6 +46,7 @@ const AppRoutes: Routes = [
     SingupComponent,
     ReservationContentComponent,
     SerchbuttonComponent,
+    RoomGridComponent,
   ],
   imports: [
     BrowserModule,

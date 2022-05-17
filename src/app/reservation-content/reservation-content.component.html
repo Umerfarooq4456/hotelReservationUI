@@ -9,7 +9,7 @@
                   <mat-select placeholder="ROOMS CATEGARY" [formControl] ="CategoryId"  >
                
 
-                    <mat-option  *ngFor="let cat of category"  [value]="cat.typeId"> {{cat.title}} - {{cat.typeId}}</mat-option>
+                    <mat-option  *ngFor="let cat of category"  [value]="cat.typeId"> {{cat.title}}</mat-option>
 
                   </mat-select>
                 </mat-form-field>
@@ -32,10 +32,20 @@
               
               <br>
 
-              <!-- <button (click)="FetchRooms()" type="button" class="btn btn-primary">Search</button> -->
-              <a  routerLink="/Serchbutton" class="btn btn-primary btn-block uppercase"  (click)="FetchRooms()" type="button">Search</a>
+            <button (click)="FetchRooms()" type="button" class="btn btn-primary">Search</button>
+              <!--   <a  routerLink="/Serchbutton" class="btn btn-primary btn-block uppercase"  (click)="FetchRooms()" type="button">Search</a> -->
             </div>
         </div>
     </section>
   </form>
+
+
+  <div *ngIf="rooms.length > 0">
+
+
+    <app-room-grid [rooms]="rooms" ></app-room-grid>
+  </div>
+
+
+
 </div>

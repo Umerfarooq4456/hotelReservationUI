@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import axios from 'axios'
 
@@ -14,6 +14,12 @@ import {  FormGroup ,FormControl, Validators } from '@angular/forms'
 export class ReservationContentComponent implements OnInit {
 
 
+
+  /// this will pass to the child component Room Grid
+  rooms: Array<any> = []
+
+
+
   CategoryId = new FormControl('', [Validators.required]);
   toDate = new FormControl('', [Validators.required]);
   fromDate = new FormControl('', [Validators.required]);
@@ -27,14 +33,14 @@ export class ReservationContentComponent implements OnInit {
 
 
   category: Array<any> = [] /// define the category as empty array of type Any Type depends on the response object of the api/end-point
-  rooms: Array<any> = []
+
   constructor() { }
 
   ngOnInit(): void {
 
     /// it runs as the component load!!
     this.GetRoomCategory();
-this.FetchRooms()
+
   }
 
   GetRoomCategory(){
