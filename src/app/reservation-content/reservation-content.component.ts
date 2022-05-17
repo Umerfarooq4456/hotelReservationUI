@@ -52,9 +52,10 @@ this.FetchRooms()
 
    console.log(this.SearchForm.value)
 
-    axios.post(environment.BaseURL + "Rooms")
+    axios.post(environment.BaseURL + "Rooms", this.SearchForm.value)
     .then(({data})=>{
       this.rooms = data; 
+      console.log(data)
       })
       .catch(err => {
         console.error(err);
