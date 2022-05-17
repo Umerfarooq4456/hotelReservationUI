@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SerchbuttonComponent implements OnInit {
 
+
+  
   cards = [
     {title: 'Title 1', content: 'Content 1'},
     {title: 'Title 2', content: 'Content 2'},

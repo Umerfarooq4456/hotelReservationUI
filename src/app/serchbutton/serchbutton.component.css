@@ -5,5 +5,15 @@ border-radius: 10px;
 .stSB {
   margin: 33px;
   padding-top: 50px;
+  width: -74px;
   
+}
+.example-card {
+  max-width: 320px;
+  
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
 }

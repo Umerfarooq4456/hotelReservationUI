@@ -26,6 +26,7 @@ import { SerchbuttonComponent } from './serchbutton/serchbutton.component';
 
 
 
+
 const AppRoutes: Routes = [
   { path: 'Login' ,  component : LoginComponent},
   { path: 'Singup' ,  component: SingupComponent} ,
@@ -62,7 +63,8 @@ const AppRoutes: Routes = [
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatGridListModule
+    MatGridListModule,
+    MatCardModule
     
 
   ],

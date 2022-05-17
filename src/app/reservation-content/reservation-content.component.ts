@@ -27,14 +27,14 @@ export class ReservationContentComponent implements OnInit {
 
 
   category: Array<any> = [] /// define the category as empty array of type Any Type depends on the response object of the api/end-point
-
+  rooms: Array<any> = []
   constructor() { }
 
   ngOnInit(): void {
 
     /// it runs as the component load!!
-    this.GetRoomCategory()
-
+    this.GetRoomCategory();
+this.FetchRooms()
   }
 
   GetRoomCategory(){
@@ -49,9 +49,16 @@ export class ReservationContentComponent implements OnInit {
 
   FetchRooms (){
 
-  
+
    console.log(this.SearchForm.value)
 
-  }
+    axios.post(environment.BaseURL + "Rooms")
+    .then(({data})=>{
+      this.rooms = data; 
+      })
+      .catch(err => {
+        console.error(err);
+      });
+    }
+    }
 
-}
