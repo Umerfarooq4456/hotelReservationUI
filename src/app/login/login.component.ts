@@ -6,6 +6,7 @@ import { environment } from '../../environments/environment'
 
 
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -34,26 +35,38 @@ console.log(control.errors);
 
   login() {
 
-    console.log(this.loginform)
 
-    if (!this.loginform.valid) {
-      console.warn("invalid form")
-    }
-    else {
 
+    if (this.loginform.valid)  {
 
       axios.post(environment.BaseURL + 'PostAccountLogin',
         this.loginform.value,
       )
-        .then(function (login) {
-          console.log("succesful");
+        .then( ({data}) => { //// destructing the response object and extracting the data
+      
 
-          console.error(login)
+          console.log(data);
+          localStorage.setItem("Hotel_UserId",data.responseData.userId)
+         console.log("Hotel_UserId",data.responseData.userId)
+
+         this.getUserId();
         })
         .catch(function (error) {
-          console.log(error);
+          console.error("Error in login API call" + error);
         });
+
+        
     }
+  }
+
+
+  getUserId(){
+    let user_id = localStorage.getItem("Hotel_UserId");
+
+
+    console.warn(user_id);
   }
   
 }
+
+
