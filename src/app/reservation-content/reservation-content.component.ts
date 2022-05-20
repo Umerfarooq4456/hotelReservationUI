@@ -2,9 +2,9 @@ import { Component, Input, OnInit } from '@angular/core';
 
 import axios from 'axios'
 
-import { environment } from '../../environments/environment' 
+import { environment } from '../../environments/environment'
 
-import {  FormGroup ,FormControl, Validators } from '@angular/forms'
+import { FormGroup, FormControl, Validators } from '@angular/forms'
 
 @Component({
   selector: 'app-reservation-content',
@@ -25,9 +25,9 @@ export class ReservationContentComponent implements OnInit {
   fromDate = new FormControl('', [Validators.required]);
 
   SearchForm = new FormGroup({
-    CategoryId : this.CategoryId,
-    toDate : this.toDate,
-    fromDate : this.fromDate
+    CategoryId: this.CategoryId,
+    toDate: this.toDate,
+    fromDate: this.fromDate
 
   })
 
@@ -43,29 +43,29 @@ export class ReservationContentComponent implements OnInit {
 
   }
 
-  GetRoomCategory(){
-    axios.get( environment.BaseURL  +"GetRoomCatogery")
-    .then(({data})=>{
-      this.category = data;  /// setting the response list to the local variable category
-    })
-    .catch(err => {
-      console.error(err);
-    })
+  GetRoomCategory() {
+    axios.get(environment.BaseURL + "GetRoomCatogery")
+      .then(({ data }) => {
+        this.category = data;  /// setting the response list to the local variable category
+      })
+      .catch(err => {
+        console.error(err);
+      })
   }
 
-  FetchRooms (){
+  FetchRooms() {
 
 
-   console.log(this.SearchForm.value)
+    console.log(this.SearchForm.value)
 
     axios.post(environment.BaseURL + "Rooms", this.SearchForm.value)
-    .then(({data})=>{
-      this.rooms = data; 
-      console.log(data)
+      .then(({ data }) => {
+        this.rooms = data;
+        console.log(data)
       })
       .catch(err => {
         console.error(err);
       });
-    }
-    }
+  }
+}
 

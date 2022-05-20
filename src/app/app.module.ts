@@ -23,6 +23,7 @@ import { MatNativeDateModule } from '@angular/material/core'; 'angular/material.
 import {MatGridListModule} from '@angular/material/grid-list';
 import { SerchbuttonComponent } from './serchbutton/serchbutton.component';
 import { RoomGridComponent } from './room-grid/room-grid.component';
+import { RoomdetailComponent } from './roomdetail/roomdetail.component';
 
 
 
@@ -34,6 +35,7 @@ const AppRoutes: Routes = [
   { path: 'Singup' ,  component: SingupComponent} ,
   { path: '' ,  component: ReservationContentComponent},
   { path: 'Serchbutton' ,  component: SerchbuttonComponent},
+  { path: 'roomDetail' ,  component: RoomdetailComponent , data : {"name" : "sami"}},
   ]
 
 
@@ -47,6 +49,7 @@ const AppRoutes: Routes = [
     ReservationContentComponent,
     SerchbuttonComponent,
     RoomGridComponent,
+    RoomdetailComponent,
   ],
   imports: [
     BrowserModule,
