@@ -1,4 +1,6 @@
 <div >
+
+ 
 <mat-grid-list cols="2" md-rowHeight="1:1" [gutterSize]="'12px'" >
   
   <mat-grid-tile *ngFor="let room of rooms">
@@ -18,9 +20,11 @@
       </mat-card-content>
       <mat-card-actions>
        
-        <button mat-button  type="button" class="stb" (click)="GetRoom(room.roomId)">GetRoom</button>
+        <a  [routerLink] = "['/roomDetail',  room.roomId]" mat-button  type="button" class="stb" >Room Details</a>
       </mat-card-actions>
     </mat-card>
+
+    <!-- (click)="GetRoom(room.roomId)" -->
 
    
   </mat-grid-tile>

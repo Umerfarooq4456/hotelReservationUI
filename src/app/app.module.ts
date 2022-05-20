@@ -35,7 +35,7 @@ const AppRoutes: Routes = [
   { path: 'Singup' ,  component: SingupComponent} ,
   { path: '' ,  component: ReservationContentComponent},
   { path: 'Serchbutton' ,  component: SerchbuttonComponent},
-  { path: 'roomDetail' ,  component: RoomdetailComponent , data : {"name" : "sami"}},
+  { path: 'roomDetail/:roomId' ,  component: RoomdetailComponent},
   ]
 
 

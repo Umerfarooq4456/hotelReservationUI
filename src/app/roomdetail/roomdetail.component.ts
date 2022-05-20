@@ -15,20 +15,40 @@ import axios from 'axios'
 export class RoomdetailComponent implements OnInit {
 
 
-  detail: any = {};
+  detail: any | undefined;
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.route.params.subscribe((params) => this.detail = params['data']);
+    this.route.params.subscribe(({roomId}) => {
+      console.log('The id of this route is: ', roomId);
+
+      this.GetRoom(roomId)
+
+    });
 
 
-    console.log("asdasd")
-
-    console.log(this
-      .detail)
+  
 }
 
+  GetRoom(roomId: number) {
 
+
+
+      axios.get(environment.BaseURL + "GetRoom", { params: { id: roomId } } )
+        .then(({ data }) => {
+          console.log(data);
+
+          this.detail = data.responseData
+
+      
+
+  
+         
+        })
+        .catch(err => {
+          console.error(err);
+        })
+    }
 
 
 }

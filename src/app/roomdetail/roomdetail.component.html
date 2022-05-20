@@ -1,5 +1,9 @@
 <!-- <button mat-button  type="button" class="stb" (click)="GetRoom">GetRoom</button> -->
 
 
-
-<p>sadasd</p>
+<div *ngIf="detail != undefined">
+<p>Room No : {{detail?.roomNo}}</p>
+<p>{{detail?.numberOfBed}}</p>
+<p>{{detail?.roomCategoryId}}</p>
+<p>{{detail?.description}}</p>
+</div>
