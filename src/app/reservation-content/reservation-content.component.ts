@@ -38,6 +38,7 @@ export class ReservationContentComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.FetchRooms()
     /// it runs as the component load!!
     this.GetRoomCategory();
 
@@ -58,7 +59,11 @@ export class ReservationContentComponent implements OnInit {
 
     console.log(this.SearchForm.value)
 
-    axios.post(environment.BaseURL + "Rooms", this.SearchForm.value)
+    axios.post(environment.BaseURL + "Rooms", {
+      "CategoryId": 4,
+      "toDate": "2022-05-13T19:00:00.000Z",
+      "fromDate": "2022-05-10T19:00:00.000Z"
+  })
       .then(({ data }) => {
         this.rooms = data;
         console.log(data)

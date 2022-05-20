@@ -1,32 +1,10 @@
-<div >
-
- 
-<mat-grid-list cols="2" md-rowHeight="1:1" [gutterSize]="'12px'" >
-  
-  <mat-grid-tile *ngFor="let room of rooms">
-
-
-    <mat-card class="example-card">
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title> Room No   {{room.roomId}}</mat-card-title>
-        <mat-card-subtitle> ID   {{room.roomCategoryId}}</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image >
-      <mat-card-content>
-        <p>
-          {{room.description}}
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-       
-        <a  [routerLink] = "['/roomDetail',  room.roomId]" mat-button  type="button" class="stb" >Room Details</a>
-      </mat-card-actions>
-    </mat-card>
-
-    <!-- (click)="GetRoom(room.roomId)" -->
-
-   
-  </mat-grid-tile>
-</mat-grid-list>
+<div class="row"> 
+ <div class="card " style="width: 18rem; margin-left: 1rem; margin-right: 1rem;"  *ngFor="let room of rooms">
+  <img src="https://media.istockphoto.com/photos/young-beautiful-woman-picture-id1294339577?b=1&k=20&m=1294339577&s=170667a&w=0&h=_5-SM0Dmhb1fhRdz64lOUJMy8oic51GB_2_IPlhCCnU=" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{room.name}}</h5>
+    <p class="card-text">{{room.description}}</p>
+    <a [routerLink]="['/roomDetail', room.roomId]" class="btn btn-primary">Detail</a>
+  </div>
+</div>
 </div>
