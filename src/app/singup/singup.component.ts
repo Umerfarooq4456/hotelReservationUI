@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import axios from 'axios'
 
-import { FormGroup, FormControl, FormBuilder,  Validators } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 
 import { environment } from '../../environments/environment'
 
@@ -16,17 +16,17 @@ export class SingupComponent implements OnInit {
 
 
 
-  constructor(private formBuilder : FormBuilder) { }
+  constructor(private formBuilder: FormBuilder) { }
 
 
-  
+
 
   ngOnInit(): void {
 
     const control = new FormControl('bad@', Validators.email);
 
     console.log(control.errors);
-    
+
 
 
     this.signUpForm = this.formBuilder.group({
@@ -35,7 +35,7 @@ export class SingupComponent implements OnInit {
       address: ['', Validators.required],
       cnic: ['', Validators.required],
       email: ['', Validators.required],
-      contactNumber:['', Validators.required],
+      contactNumber: ['', Validators.required],
       password: ['', Validators.required],
       confirmPassword: ['', Validators.required]
 
@@ -48,24 +48,24 @@ export class SingupComponent implements OnInit {
 
     console.log(this.signUpForm)
 
-    if(! this.signUpForm.valid){
-console.error("invalid form")
+    if (!this.signUpForm.valid) {
+      console.error("invalid form")
     }
-    else{
+    else {
 
 
-    axios.post(environment.BaseURL + 'PostAccount',
-    this.signUpForm.value,
-    )
-      .then(function (singup) {
-        console.warn("succesful");
+      axios.post(environment.BaseURL + 'PostAccount',
+        this.signUpForm.value,
+      )
+        .then(function (singup) {
+          console.warn("succesful");
 
-        console.error(singup)
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+          console.error(singup)
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
     }
-    }
+  }
 
 }

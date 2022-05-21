@@ -1,9 +1,25 @@
 <!-- <button mat-button  type="button" class="stb" (click)="GetRoom">GetRoom</button> -->
+<div class="row no-gutters bg-light rounded p-3 p-sm-4 my-3 my-sm-5 text-center border rounded" class="align">
+    <div class="border border-dark img"> <img 
+            src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aG90ZWwlMjByb29tfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500" alt="..." class="rounded"
+           ></div>
+    <div>
 
 
-<div *ngIf="detail != undefined">
-<p>Room No : {{detail?.roomNo}}</p>
-<p>{{detail?.numberOfBed}}</p>
-<p>{{detail?.roomCategoryId}}</p>
-<p>{{detail?.description}}</p>
+        <div *ngIf="detail != undefined" class="detail">
+            <p>Room No : {{detail?.roomNo}}</p>
+            <p>NumberOfBed = {{detail?.numberOfBed}}</p>
+            <p>RoomCategoryId = {{detail?.roomCategoryId}}</p>
+            <p>Description = {{detail?.description}}</p>
+            <br>
+            <textarea (keyup)="descriptionUpdate($event)" rows="4" cols="50" name="comment" form="usrform" class="textarea" placeholder="Enter text here"></textarea>
+
+            <br>
+            <button class="btn btn-xs shadow-none btn-primary "  (click)="postbooking()">BOOK</button>
+
+        </div>
+
+    </div>
+
+
 </div>

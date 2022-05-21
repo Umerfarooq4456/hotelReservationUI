@@ -59,11 +59,13 @@ export class ReservationContentComponent implements OnInit {
 
     console.log(this.SearchForm.value)
 
-    axios.post(environment.BaseURL + "Rooms", {
-      "CategoryId": 4,
-      "toDate": "2022-05-13T19:00:00.000Z",
-      "fromDate": "2022-05-10T19:00:00.000Z"
-  })
+
+    localStorage.setItem("toDate",this.SearchForm.value.toDate)
+    localStorage.setItem("fromDate",this.SearchForm.value.fromDate)
+
+    axios.post(environment.BaseURL + "Rooms", 
+      this.SearchForm.value
+    )
       .then(({ data }) => {
         this.rooms = data;
         console.log(data)

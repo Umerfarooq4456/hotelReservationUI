@@ -20,6 +20,7 @@
             <mat-form-field appearance="outline" [style.width.px]=200>
                 <mat-label>Check In</mat-label>
                 <input matInput [matDatepicker]="picker1" formControlName="fromDate">
+                
                 <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
                 <mat-datepicker #picker1></mat-datepicker>
               </mat-form-field>          
@@ -41,11 +42,6 @@
 
 
   <div *ngIf="rooms.length > 0">
-
-
     <app-room-grid [rooms]="rooms" ></app-room-grid>
   </div>
-
-
-
 </div>
