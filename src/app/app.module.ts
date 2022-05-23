@@ -27,6 +27,8 @@ import { RoomGridComponent } from './room-grid/room-grid.component';
 import { RoomdetailComponent } from './roomdetail/roomdetail.component';
 import { MybookingsComponent } from './mybookings/mybookings.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { VerificationcodeComponent } from './verificationcode/verificationcode.component';
+import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
 
 
 
@@ -40,7 +42,10 @@ const AppRoutes: Routes = [
   { path: 'Serchbutton' ,  component: SerchbuttonComponent},
   { path: 'roomDetail/:roomId' ,  component: RoomdetailComponent},
   {path: 'mybookings',  component: MybookingsComponent},
-  { path: 'forgotpassword' ,  component: ForgotpasswordComponent}
+  { path: 'forgotpassword' ,  component: ForgotpasswordComponent},
+  { path: 'verificationcode' ,  component: VerificationcodeComponent},
+  { path: 'resetpassword' ,  component: ResetpasswordComponent},
+{ path: 'loginform' ,  component :LoginComponent}
   ]
 
 
@@ -57,6 +62,8 @@ const AppRoutes: Routes = [
     RoomdetailComponent,
     MybookingsComponent,
     ForgotpasswordComponent,
+    VerificationcodeComponent,
+    ResetpasswordComponent,
   ],
   imports: [
     BrowserModule,
@@ -78,7 +85,7 @@ const AppRoutes: Routes = [
     MatNativeDateModule,
     MatGridListModule,
     MatCardModule,
-
+ 
 
   ],
   providers: [],

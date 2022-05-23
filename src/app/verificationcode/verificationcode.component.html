@@ -1,0 +1,11 @@
+<form class="pass1" [formGroup]="Verification" name="myForm">
+    <div class="mb-5 ">
+      <label for="number" class="form-label">Verification Code</label>
+      <input  type="text" class="form-control" id="verificationcode" formControlName="Verification" name="myInput" ng-model="myInput"  ng-maxlength="6" >
+    
+    </div>
+    
+    <a routerLink="/resetpassword"  type="submit" class="btn btn-primary" >Confirm</a>
+
+    <!-- <a  routerLink="/loginform" type="submit" class="btn btn-primary">Confirm</a> -->
+  </form>

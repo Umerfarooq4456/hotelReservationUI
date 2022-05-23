@@ -38,7 +38,7 @@ export class ReservationContentComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.FetchRooms()
+    
     /// it runs as the component load!!
     this.GetRoomCategory();
 

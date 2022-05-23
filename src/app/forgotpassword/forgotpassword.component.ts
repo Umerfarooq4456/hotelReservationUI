@@ -10,27 +10,27 @@ import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
 export class ForgotpasswordComponent implements OnInit {
 
   forgotform !: FormGroup
-  password: any = ""
+  email: any = ""
 
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-       const control = new FormControl('bad@', Validators.email);
+    const control = new FormControl('bad@', Validators.email);
 
-console.log(control.errors);
+    console.log(control.errors);
 
     this.forgotform = this.formBuilder.group({
-      ForgotPassword: ['', Validators.required],
+      email: ['', Validators.required],
     })
 
   }
 
 
   forgotpassword() {
-    axios.post(environment.BaseURL + "ForgotPassword", this.password.value)
+    axios.post(environment.BaseURL + "ForgotPassword", this.email.value)
       .then(({ data }) => {
         console.log(data)
-        this.password = data;
+        this.email = data;
 
       })
       .catch(err => {
