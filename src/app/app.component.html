@@ -1,11 +1,14 @@
-
 <mat-toolbar color="primary">
-  <button mat-icon-button  class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>bookmark_border</mat-icon>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>home</mat-icon>
   </button>
   <span>Hotel Reservation System</span>
   <span class="example-spacer"></span>
-  <button mat-icon-button >Help</button>
+  <button mat-icon-button>Help</button>
+  <a routerLink="/mybookings" mat-icon-button>
+    <mat-icon>history</mat-icon>
+  </a>
+
   <a routerLink="/Login" mat-raised-button class="st11">Login</a>
 </mat-toolbar>
 

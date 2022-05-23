@@ -25,6 +25,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { SerchbuttonComponent } from './serchbutton/serchbutton.component';
 import { RoomGridComponent } from './room-grid/room-grid.component';
 import { RoomdetailComponent } from './roomdetail/roomdetail.component';
+import { MybookingsComponent } from './mybookings/mybookings.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 
 
 
@@ -37,6 +39,8 @@ const AppRoutes: Routes = [
   { path: '' ,  component: ReservationContentComponent},
   { path: 'Serchbutton' ,  component: SerchbuttonComponent},
   { path: 'roomDetail/:roomId' ,  component: RoomdetailComponent},
+  {path: 'mybookings',  component: MybookingsComponent},
+  { path: 'forgotpassword' ,  component: ForgotpasswordComponent}
   ]
 
 
@@ -51,6 +55,8 @@ const AppRoutes: Routes = [
     SerchbuttonComponent,
     RoomGridComponent,
     RoomdetailComponent,
+    MybookingsComponent,
+    ForgotpasswordComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,7 +77,8 @@ const AppRoutes: Routes = [
     MatDatepickerModule,
     MatNativeDateModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+
 
   ],
   providers: [],

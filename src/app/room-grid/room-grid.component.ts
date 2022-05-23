@@ -11,9 +11,9 @@ import { Router } from '@angular/router';
 })
 export class RoomGridComponent implements OnInit {
 
-  RoomDetail : any = {}
+  RoomDetail: any = {}
 
-@Input() rooms : Array<any> = []
+  @Input() rooms: Array<any> = []
 
   constructor(private _router: Router) { }
 
@@ -27,11 +27,11 @@ export class RoomGridComponent implements OnInit {
 
 
 
-    axios.get(environment.BaseURL + "GetRoom", { params: { id: roomId } } )
+    axios.get(environment.BaseURL + "GetRoom", { params: { id: roomId } })
       .then(({ data }) => {
         console.log(data);
 
-        this._router.navigate(['roomDetail'],data)
+        this._router.navigate(['roomDetail'], data)
       })
       .catch(err => {
         console.error(err);
