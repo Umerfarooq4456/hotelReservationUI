@@ -1,9 +1,15 @@
-<form class="pass1" [formGroup]="Verification" name="myForm">
-    <div class="mb-5 ">
-      <label for="number" class="form-label">Verification Code</label>
-      <input  type="text" class="form-control" id="verificationcode" formControlName="Verification" name="myInput" ng-model="myInput"  ng-maxlength="6" >
+
+<div class="row">  
+  <div class="col-md-4 offset-md-4 col-8 offset-2">
+      <div class="loginform">
+          <form [formGroup]="Verification" class="example-form">
+              <mat-form-field class="example-full-width" appearance="outline">
+                  <mat-label>Verification Code</mat-label>
+                  <input type="text" name="number" matInput email="true" formControlName="email" placeholder="Verification Code">
+              </mat-form-field>
+          
+          </form>
+          <a routerLink="/resetpassword" mat-raised-button color="primary" type="button" >Confirm</a>
+          </div>
     
-    </div>
-    
-    <a routerLink="/resetpassword"  type="submit" class="btn btn-primary" >Confirm</a>
-  </form>
+ 

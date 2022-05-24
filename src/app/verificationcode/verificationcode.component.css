@@ -1,24 +1,22 @@
-.pass1 {
-    background-color: lightgray;
+.loginform {
+    text-align: center;
+    padding-top: 15px;
+    background-color: aliceblue;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding-bottom: 15px;
+}
+.example-form {
+    min-width: 150px;
     max-width: 500px;
-    width: 150%;
-    align-content: center;
-    margin-left: 500px;
-    margin-top: 15px;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-.mb-5 {
-    margin-top: 15px;
-    padding-top: 5px;
-}
-
-.btn {
-    margin-bottom: 20px;
+    width: 44%;
     align-items: center;
-}
-
-.form-control {
-    width: 150px;
-}
+    
+  }
+  .example-full-width {
+    width: 100%;
+    
+  }
+  .mat-form-field {
+      margin-left: 128px;
+  }
