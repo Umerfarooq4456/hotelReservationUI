@@ -31,7 +31,7 @@ export class RoomGridComponent implements OnInit {
       .then(({ data }) => {
         console.log(data);
 
-        this._router.navigate(['roomDetail'], data)
+        this._router.navigate(['roomDetail'],data)
       })
       .catch(err => {
         console.error(err);

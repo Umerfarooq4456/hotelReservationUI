@@ -5,11 +5,11 @@
           <form [formGroup]="Verification" class="example-form">
               <mat-form-field class="example-full-width" appearance="outline">
                   <mat-label>Verification Code</mat-label>
-                  <input type="text" name="number" matInput email="true" formControlName="email" placeholder="Verification Code">
+                  <input type="text" name="number" matInput email="true" formControlName="code" placeholder="Verification Code">
               </mat-form-field>
           
           </form>
-          <a routerLink="/resetpassword" mat-raised-button color="primary" type="button" >Confirm</a>
+          <button mat-raised-button color="primary" type="button" (click)="VerificationCode()" >Confirm</button>
           </div>
     
  

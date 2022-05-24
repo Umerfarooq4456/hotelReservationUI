@@ -43,8 +43,8 @@ const AppRoutes: Routes = [
   { path: 'roomDetail/:roomId' ,  component: RoomdetailComponent},
   {path: 'mybookings',  component: MybookingsComponent},
   { path: 'forgotpassword' ,  component: ForgotpasswordComponent},
-  { path: 'verificationcode' ,  component: VerificationcodeComponent},
-  { path: 'resetpassword' ,  component: ResetpasswordComponent},
+  { path: 'verificationcode/:email' ,  component: VerificationcodeComponent},
+  { path: 'resetpassword/:email' ,  component: ResetpasswordComponent},
 { path: 'loginform' ,  component :LoginComponent}
   ]
 
