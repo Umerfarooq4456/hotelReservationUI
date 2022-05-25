@@ -36,16 +36,17 @@ import { ResetpasswordComponent } from './resetpassword/resetpassword.component'
 
 
 const AppRoutes: Routes = [
+  { path: '' ,  component : LoginComponent},
   { path: 'Login' ,  component : LoginComponent},
   { path: 'Singup' ,  component: SingupComponent} ,
-  { path: '' ,  component: ReservationContentComponent},
+  { path: 'Reservation' ,  component: ReservationContentComponent},
   { path: 'Serchbutton' ,  component: SerchbuttonComponent},
   { path: 'roomDetail/:roomId' ,  component: RoomdetailComponent},
   {path: 'mybookings',  component: MybookingsComponent},
   { path: 'forgotpassword' ,  component: ForgotpasswordComponent},
   { path: 'verificationcode/:email' ,  component: VerificationcodeComponent},
   { path: 'resetpassword/:email' ,  component: ResetpasswordComponent},
-{ path: 'loginform' ,  component :LoginComponent}
+  { path: 'loginform' ,  component :LoginComponent}
   ]
 
 

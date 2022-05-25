@@ -4,6 +4,8 @@ import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
 
 import { environment } from '../../environments/environment'
 
+import { Router } from '@angular/router';
+
 
 
 
@@ -16,7 +18,7 @@ export class LoginComponent implements OnInit {
 
   loginform !: FormGroup
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -48,6 +50,8 @@ console.log(control.errors);
           console.log(data);
           localStorage.setItem("Hotel_UserId",data.responseData.userId)
          console.log("Hotel_UserId",data.responseData.userId)
+
+         this.router.navigate(['Reservation'])
 
          this.getUserId();
         })

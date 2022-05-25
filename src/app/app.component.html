@@ -9,7 +9,10 @@
     <mat-icon>history</mat-icon>
   </a>
 
-  <a routerLink="/Login" mat-raised-button class="st11">Login</a>
+  <div *ngIf="IsLoginedIn == false">
+      <a routerLink="/Login" mat-raised-button class="st11">Login</a>
+    </div>
+
 </mat-toolbar>
 
 <router-outlet></router-outlet>

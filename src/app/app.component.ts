@@ -9,7 +9,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Hotel-Reservation';
 
+  IsLoginedIn : boolean = false;
+
   ngOnInit(): void {
+
+    var userId = localStorage.getItem("Hotel_UserId")
+
+    if(userId !=  null){
+      this. IsLoginedIn = true;
+    }
+
   }
 
 
