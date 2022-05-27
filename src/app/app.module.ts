@@ -29,6 +29,7 @@ import { MybookingsComponent } from './mybookings/mybookings.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { VerificationcodeComponent } from './verificationcode/verificationcode.component';
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
 
 
 
@@ -46,7 +47,8 @@ const AppRoutes: Routes = [
   { path: 'forgotpassword' ,  component: ForgotpasswordComponent},
   { path: 'verificationcode/:email' ,  component: VerificationcodeComponent},
   { path: 'resetpassword/:email' ,  component: ResetpasswordComponent},
-  { path: 'loginform' ,  component :LoginComponent}
+  { path: 'loginform' ,  component :LoginComponent},
+  { path: 'userprofile' ,  component :UserprofileComponent}
   ]
 
 
@@ -65,6 +67,7 @@ const AppRoutes: Routes = [
     ForgotpasswordComponent,
     VerificationcodeComponent,
     ResetpasswordComponent,
+    UserprofileComponent,
   ],
   imports: [
     BrowserModule,
