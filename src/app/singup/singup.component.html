@@ -1,15 +1,11 @@
-<div class="row">
+<div class="container">
     <div class="col-md-4 offset-md-4 col-8 offset-2">
         <div class="sinupfrom">
             <form [formGroup]="signUpForm" class="singup-form">
                 <mat-form-field class="singup-full-width" appearance="outline">
                     <mat-label>First Name</mat-label>
                     <input placeholder="First Name" formControlName="firstName" matInput type="text" id="firstName" name="firstName" class="formcontrol" required minlength="4" >
-                <!-- <span 
-                class="text-danger" 
-                *ngIf="signUpForm.get('firstName')?.errors && 
-                signUpForm.get('firstName')?.errors"
-            > Please enter username</span>     -->
+
          </mat-form-field>
                 <mat-form-field class="singup-full-width"  appearance="outline">
                     <mat-label>Last Name</mat-label>
@@ -43,7 +39,7 @@
                     <mat-label>Confirm Password</mat-label>
                     <input placeholder="*********"  formControlName="confirmPassword"  matInput >
                 </mat-form-field>
-                    <button mat-raised-button color="primary" type="button" (click)="Register()">Register</button>
+                    <button mat-raised-button type="button" (click)="Register()">Register</button>
             </form>
         </div>
     </div>

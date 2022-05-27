@@ -1,8 +1,8 @@
 
-<div class="row">  
-    <div class="col-md-4 offset-md-4 col-8 offset-2">
+<div class="container">  
+    <div >
         <div class="loginform">
-            <form [formGroup]="loginform" class="example-form">
+            <form [formGroup]="loginform" class="login-form">
                 <mat-form-field class="example-full-width" appearance="outline">
                     <mat-label>Email</mat-label>
                     <input type="email" name="email" matInput email="true" formControlName="email" placeholder="Ex.inov@example.com">
@@ -13,8 +13,8 @@
                 </mat-form-field>
             </form>
             <a  routerLink="/forgotpassword"  mat-icon-button class="frogot1" >Forgot password</a>
-            <button mat-raised-button color="primary" class="st1" (click)="login()">Login</button>
-            <a routerLink="/Singup" mat-raised-button color="primary" >SignUp</a>
+            <button mat-raised-button  class="st1" (click)="login()">Login</button>
+            <a routerLink="/Singup" mat-raised-button >SignUp</a>
          
            
         </div>

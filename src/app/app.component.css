@@ -15,8 +15,11 @@
     margin-bottom: 5px;
   }
   .color1 {
-    background: linear-gradient(to right, #ed9254, #ee2737);
+    background: linear-gradient(to right, #13536e, #99a54b);
     font-family: 'Montserrat', sans-serif;
+  }
+  .mat-toolbar {
+    color:white;
   }
 
   
