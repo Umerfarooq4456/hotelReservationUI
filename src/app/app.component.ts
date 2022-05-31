@@ -7,12 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+
+
   title = 'Hotel-Reservation';
 
   IsLoginedIn : boolean = false;
 
+  imageSrc = 'assets/imagess/bookit-logos_white.png'  
+   imageAlt = 'logo'
+
+
   ngOnInit(): void {
 
+ 
+   
     var userId = localStorage.getItem("Hotel_UserId")
 
     if(userId !=  null){

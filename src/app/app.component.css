@@ -19,8 +19,10 @@
     background: linear-gradient(to right, #13536e, #99a54b);
     font-family: 'Montserrat', sans-serif;
   }
-  .mat-toolbar {
+  .mat-toolbar , .at-toolbar-single-row {
     color:white;
+      height: 70px;
+  
   }
 .profile {
   color: initial;
@@ -30,6 +32,13 @@
 .material-icons.color_white { 
   color: #FFFFFF; 
 }
+
+
+
+
+
+
+
 
 
 

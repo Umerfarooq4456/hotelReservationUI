@@ -1,21 +1,30 @@
+
+<link rel="icon" type="image/jpeg" href="favicon.jpeg">
+<title>Bookit.pk</title>
+
 <div>
+  <mat-toolbar class="color1">
+    <div class="logo1">
+    <a routerLink="/Reservation" title="bookit - Home" class="nav-link" href="#">
 
-<mat-toolbar class="color1" >
-  <a routerLink="/Reservation" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>home</mat-icon>
-  </a>
-  <span color="white">Hotel Reservation System</span>
-  <span class="example-spacer"></span>
-  <div class="profile">
-  <a routerLink="/userprofile" ><mat-icon class="material-icons color_white">account_circle</mat-icon></a></div>
-  <a routerLink="/mybookings" mat-icon-button>
-    <mat-icon>history</mat-icon>
-  </a>
+      <img [src]="imageSrc" [alt]="imageAlt" width="180px" />
 
-  <div *ngIf="IsLoginedIn == false">
+    </a>
+  </div>
+    <span class="example-spacer"></span>
+    <div class="profile">
+      <a routerLink="/userprofile">
+        <mat-icon class="material-icons color_white">account_circle</mat-icon>
+      </a>
+    </div>
+    <a routerLink="/mybookings" mat-icon-button>
+      <mat-icon>history</mat-icon>
+    </a>
+
+    <div *ngIf="IsLoginedIn == false">
       <a routerLink="/Login" mat-raised-button class="st11">Login</a>
     </div>
 
-</mat-toolbar>
+  </mat-toolbar>
 </div>
 <router-outlet></router-outlet>
