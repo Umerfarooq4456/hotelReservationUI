@@ -15,24 +15,42 @@ import {
   styleUrls: ['./userprofile.component.css'],
 })
 export class UserprofileComponent implements OnInit {
+
+
+  User_Email : string = '';
   profileURL: string =
     'https://dreamvilla.life/wp-content/uploads/2017/07/dummy-profile-pic.png';
 
-  EditForm!: FormGroup;
+  EditForm: FormGroup = new FormGroup({
+   
+    Address: new FormControl('', [Validators.required]),
+    FirstName: new FormControl('', [Validators.required]),
+    LastName: new FormControl('', [Validators.required]),
+    Email: new FormControl('', [Validators.required]),
+    Cnic: new FormControl('', [Validators.required]),
+    ContactNumber: new FormControl('', [Validators.required]),
+  });
 
   shortLink: string = '';
   loading: boolean = false; // Flag variable
   file: any = undefined; // Flag variableVariable to store file
 
+
+
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
     this.GetProfile();
+
+    
   }
 
   // On file Select
   onChange(event: any) {
-    this.file = event.target.files[0];
+
+        this.file = event.target.files[0];
+     this.onUpload()
+
   }
 
   GetProfile() {
@@ -46,10 +64,18 @@ export class UserprofileComponent implements OnInit {
         if (data.responseCode === 200) {
           var user = data.responseData;
 
-          this.EditForm = this.formBuilder.group({
+          console.log(user);
+          this.profileURL = environment.ProfileFoto + user.profilePhoto;
+
+          this.User_Email = user.email
+          this.EditForm = new FormGroup({
+            user_Id: new FormControl(localStorage.getItem('Hotel_UserId'), [Validators.required]),
             Address: new FormControl(user.address, [Validators.required]),
-            firstName: new FormControl(user.firstName, [Validators.required]),
-            email: new FormControl(user.email, [Validators.required]),
+            FirstName: new FormControl(user.firstName, [Validators.required]),
+            LastName: new FormControl(user.lastName, [Validators.required]),
+            Email: new FormControl(user.email, [Validators.required]),
+            Cnic: new FormControl(user.cnic, [Validators.required]),
+            ContactNumber: new FormControl(user.contactNumber, [Validators.required]),
           });
         }
       })
@@ -59,13 +85,13 @@ export class UserprofileComponent implements OnInit {
   }
 
   onUpload() {
-    console.log(this.file);
+  
 
     let formData = new FormData();
 
     // Store form name as "file" with file data
     formData.append('file', this.file);
-    formData.append('UserId', '1');
+    formData.append('UserId', '1'); /// use localstorage for this 
 
     axios
       .post(environment.BaseURL + 'UploadProfilePhoto', formData, {
@@ -85,5 +111,18 @@ export class UserprofileComponent implements OnInit {
 
   SaveProfile() {
     console.log(this.EditForm.value);
+
+    axios.post(environment.BaseURL + "UpdateProfileRequest" , this.EditForm.value)
+    .then(({data})=>{
+     
+      if(data.responseCode === 200) {
+            this.User_Email = this.EditForm.value.Email
+      }
+  
+
+    })
+    .catch(err =>{
+      console.log(err);
+    })
   }
 }

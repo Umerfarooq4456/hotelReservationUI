@@ -3,26 +3,25 @@
     <div class="col-md-3 border-right">
       <div class="d-flex flex-column align-items-center text-center p-3 py-5">
         <img
-          class="rounded-circle mt-5"
-          width="150px"
+          class="imageRound mt-5"
           src="{{ profileURL }}"
-        /><span class="font-weight-bold">Profile Picture</span>
-        <span class="text-black-50">Email@gmail.com</span>
+        />
+
+        <span class="text-black-50">{{User_Email}}</span>
         <form enctype="multipart/form-data">
-          <input
+      
+
+          <span class="btn btn-primary btn-file">
+            Update
+            <input
             type="file"
             mat-stroked-button
             color="primary"
             (change)="onChange($event)"
           />
-          <button
-            (click)="onUpload()"
-            type="button"
-            mat-stroked-button
-            color="primary"
-          >
-            Update
-          </button>
+        </span>
+
+      
         </form>
       </div>
     </div>
@@ -33,31 +32,37 @@
             <h4 class="text-right">Profile Settings</h4>
           </div>
           <div class="row mt-2">
+   
             <div class="col-md-6">
-              <label class="labels">Name</label
-              ><input type="text" class="form-control" value="" formControlName="firstName"   />
+              <label class="labels">First Name</label
+              ><input type="text" class="form-control" formControlName="FirstName"  />
             </div>
+
             <div class="col-md-6">
-              <label class="labels">Username</label
-              ><input type="text" class="form-control"  />
+              <label class="labels">Last Name</label
+              ><input type="text" class="form-control" formControlName="LastName"   />
             </div>
           </div>
           <div class="row mt-3">
             <div class="col-md-12">
               <label class="labels">Address</label
               ><input type="text" class="form-control"  formControlName="Address"  value="" />
+         
             </div>
             <div class="col-md-12">
               <label class="labels">CNIC</label
-              ><input type="text" class="form-control" value="" />
+              ><input type="text"  mask='00000-0000000-0' class="form-control" formControlName="Cnic" value="" />
             </div>
             <div class="col-md-12">
+             
               <label class="labels">Contact</label
-              ><input type="text" class="form-control" value="" />
+                
+              ><input type="text" mask='0000-000-0000' class="form-control" value="" formControlName="ContactNumber" />
+              <span>{{'03XX-XXX-XXXX'}}</span>
             </div>
             <div class="col-md-12">
               <label class="labels">Email</label
-              ><input type="text" class="form-control" value="" formControlName="email"   />
+              ><input type="text" class="form-control" value="" formControlName="Email"   />
             </div>
           </div>
           <div class="mt-5 text-center">

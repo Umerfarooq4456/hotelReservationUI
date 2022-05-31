@@ -18,6 +18,8 @@ import { concatAll } from 'rxjs';
 export class RoomdetailComponent implements OnInit {
 
 
+
+  image: string[] = []
   description : string = ""
 
   BookingDetail: any = {
@@ -75,6 +77,10 @@ export class RoomdetailComponent implements OnInit {
         console.log(data);
 
         this.detail = data.responseData
+
+        this.image = data.responseData.images
+
+        console.log(this.image);
 
       })
       .catch(err => {

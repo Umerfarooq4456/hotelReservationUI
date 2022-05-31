@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { NgxMaskModule, IConfig } from 'ngx-mask'
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -89,6 +91,7 @@ const AppRoutes: Routes = [
     MatNativeDateModule,
     MatGridListModule,
     MatCardModule,
+    NgxMaskModule.forRoot(),
  
 
   ],
