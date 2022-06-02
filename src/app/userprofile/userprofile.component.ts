@@ -56,7 +56,7 @@ export class UserprofileComponent implements OnInit {
   GetProfile() {
     axios
       .get(environment.BaseURL + 'GetAccountByUserId', {
-        params: { userId: 1 },
+        params: { userId: localStorage.getItem("Hotel_UserId") },
       })
       .then(({ data }) => {
         console.log(data);
@@ -91,7 +91,7 @@ export class UserprofileComponent implements OnInit {
 
     // Store form name as "file" with file data
     formData.append('file', this.file);
-    formData.append('UserId', '1'); /// use localstorage for this 
+    formData.append('UserId', localStorage.getItem("Hotel_UserId")?? ""); /// use localstorage for this 
 
     axios
       .post(environment.BaseURL + 'UploadProfilePhoto', formData, {
@@ -115,6 +115,7 @@ export class UserprofileComponent implements OnInit {
     axios.post(environment.BaseURL + "UpdateProfileRequest" , this.EditForm.value)
     .then(({data})=>{
      
+      console.log(data)
       if(data.responseCode === 200) {
             this.User_Email = this.EditForm.value.Email
       }

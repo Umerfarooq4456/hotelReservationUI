@@ -14,7 +14,7 @@ export class AppComponent {
 
   IsLoginedIn : boolean = false;
 
-  imageSrc = 'assets/imagess/bookit-logos_white.png'  
+  imageSrc = 'assets/imagess/bookit (8).png'  
    imageAlt = 'logo'
 
 

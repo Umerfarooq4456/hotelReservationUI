@@ -16,11 +16,11 @@
    
   }
   .color1 {
-    background: linear-gradient(to right, #13536e, #99a54b);
+    background: ghostwhite;
     font-family: 'Montserrat', sans-serif;
   }
   .mat-toolbar , .at-toolbar-single-row {
-    color:white;
+    color:black;
       height: 70px;
   
   }
@@ -30,7 +30,7 @@
   margin-left: 8px;
 }
 .material-icons.color_white { 
-  color: #FFFFFF; 
+  color: black; 
 }
 
 

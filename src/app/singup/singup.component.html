@@ -1,11 +1,11 @@
-<div class="container" >
+<div >
     <div class="col-md-4 offset-md-4 col-8 offset-2">
         <div class="sinupfrom">
             <form [formGroup]="signUpForm" class="singup-form">
                 <mat-form-field class="singup-full-width" appearance="outline">
                     <mat-label>First Name</mat-label>
                     <input placeholder="First Name" formControlName="firstName" matInput type="text" id="firstName" name="firstName" class="formcontrol" required minlength="4" >
-
+                  
          </mat-form-field>
                 <mat-form-field class="singup-full-width"  appearance="outline">
                     <mat-label>Last Name</mat-label>
@@ -39,7 +39,7 @@
                     <mat-label>Confirm Password</mat-label>
                     <input placeholder="*********"  formControlName="confirmPassword"  matInput >
                 </mat-form-field>
-                    <button mat-raised-button type="button" (click)="Register()">Register</button>
+                    <a  routerLink="/Login"  mat-raised-button type="button" (click)="Register()">Register</a>
             </form>
         </div>
     </div>

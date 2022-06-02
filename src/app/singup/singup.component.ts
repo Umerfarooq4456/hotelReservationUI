@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import axios from 'axios'
-
+import { Router } from '@angular/router';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 
 import { environment } from '../../environments/environment'
@@ -16,7 +16,7 @@ export class SingupComponent implements OnInit {
 
 
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,private _router: Router) { }
 
 
 

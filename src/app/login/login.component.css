@@ -1,31 +1,32 @@
 .loginform {
   text-align: -webkit-center;
-    padding-top: 75px;
+  
     box-sizing: content-box;
-   
-}
-.login-form {
+    background-color: ghostwhite;
     min-width: 150px;
     max-width: 500px;
     width: 100%;
+    margin:auto;
+    padding: 25px;
+    border-radius: 10px;
+    margin-top:150px
     
-    
-  }
+   
+}
   .example-full-width {
     width: 100%;
+    
     
   }
   .st1 {
     margin-right: 3px;
+
   }
   .frogot1 {
     margin-right: 150px;
   font-weight: 300;
   font-family: Arial, Helvetica, sans-serif;
   }
-  .container {
-    background-image: url(https://images.unsplash.com/photo-1615859131861-052f0641a60e?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1889);
-    width: 100%; 
-    max-width: 1399px;
-    height: 88%;
-}
+ 
+
+

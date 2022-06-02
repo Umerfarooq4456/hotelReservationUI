@@ -1,23 +1,27 @@
 .sinupfrom {
     text-align: center;
     padding-top: 15px;
-    color:white;
-    
+   color:black
+ 
 }
 .singup-form {
+  
+    text-align: -webkit-center;
+  
+    box-sizing: content-box;
+    background-color: ghostwhite;
     min-width: 150px;
     max-width: 500px;
     width: 100%;
-    align-items: center;
-    
+    margin:auto;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top:15px
   }
   .singup-full-width {
     width: 100%;
     
   }
-  .container{
-    background-image: url(https://images.unsplash.com/photo-1615859131861-052f0641a60e?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1889);
-    width: 100%; 
-    max-width: 1399px;
-    height: 110%;
-  }
+::placeholder{
+  color:white;
+}

@@ -5,3 +5,66 @@
     width: 33%;
     line-height: 2.5;
 }
+.p-4 {
+  margin-top: 2.5rem !important;
+}
+
+
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+
+body {
+	overflow-x: hidden;
+	color: #fff;
+}
+
+p {
+	font-size: 14px;
+}
+
+.container-fluid {
+	background-color: #f5f5f5!important;
+}
+
+.top-part {
+    background-color: #ececec!important;
+}
+
+.center-content {
+	margin-top: 120px;
+	margin-bottom: 120px;
+}
+
+.btn-pink {
+	border-radius: 0;
+	background-color: #FF4081;
+	color: #fff !important;
+	letter-spacing: 2px;
+	padding: 10px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.btn-pink:hover {
+	background-color: #F50057;
+}
+
+.line {
+	border-top: 1px solid #7B1FA2;
+	width: 90% !important;
+}
+
+.fa-mobile {
+	font-size: 20px;
+}
+
+#contact {
+	font-size: 15px;
+}
+
+.grey-text {
+	color: lightgrey;
+}

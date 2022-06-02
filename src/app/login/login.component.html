@@ -1,23 +1,24 @@
-
-<div class="container">  
-    <div >
-        <div class="loginform">
-            <form [formGroup]="loginform" class="login-form">
-                <mat-form-field class="example-full-width" appearance="outline">
-                    <mat-label>Email</mat-label>
-                    <input type="email" name="email" matInput email="true" formControlName="email" placeholder="Ex.inov@example.com">
-                </mat-form-field>
-                <mat-form-field class="example-full-width" appearance="outline">
-                    <mat-label>Password</mat-label>
-                    <input type="Password" name="Password" formControlName="password" matInput placeholder="********">   
-                </mat-form-field>
-            </form>
-            <a  routerLink="/forgotpassword"  mat-icon-button class="frogot1" >Forgot password</a>
-            <button mat-raised-button  class="st1" (click)="login()">Login</button>
-            <a routerLink="/Singup" mat-raised-button >SignUp</a>
+<div class="container  ">
+    <div class="loginform ">
+        <h1>Bookit    login</h1>
+        <h2>Sign in to start your session</h2>  
+        <form [formGroup]="loginform" class="login-form">
          
-           
-        </div>
-        
-  </div>
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input type="email" name="email" matInput email="true" formControlName="email"
+                    placeholder="Ex.inov@example.com">
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Password</mat-label>
+                <input type="Password" name="Password" formControlName="password" matInput placeholder="********">
+            </mat-form-field>
+        </form>
+        <a routerLink="/forgotpassword" mat-icon-button class="frogot1">Forgot password</a>
+        <button mat-raised-button color="primary" class="st1" (click)="login()">Login</button>
+        <a routerLink="/Singup" mat-raised-button color="primary" >SignUp</a>
+
+
+    </div>
+
 </div>

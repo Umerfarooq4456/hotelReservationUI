@@ -1,47 +1,107 @@
+<div id="reservatrion">
+  <form [formGroup]="SearchForm">
+    <section class="container">
+      <div class="bg-light bg-gradient shadow-md rounded p-4" style="margin: 140px 0px !important;">
+        <div mat-dialog-content>
+          <h2 mat-dialog-title>Search and Book Rooms</h2>
+          <mat-form-field appearance="outline" [style.width.px]=412>
+            <mat-select placeholder="ROOMS CATEGARY" [formControl]="CategoryId">
 
-   <div id="reservatrion">
-    <form [formGroup]="SearchForm">
-   <section class="container">
-        <div class="bg-light shadow-md rounded p-4">
-            <div mat-dialog-content>
-                <h2 mat-dialog-title >Search and Book Rooms</h2>
-                <mat-form-field appearance="outline" [style.width.px]=412   >
-                  <mat-select placeholder="ROOMS CATEGARY" [formControl] ="CategoryId"  >
-               
 
-                    <mat-option  *ngFor="let cat of category"  [value]="cat.typeId"> {{cat.title}}</mat-option>
+              <mat-option *ngFor="let cat of category" [value]="cat.typeId"> {{cat.title}}</mat-option>
 
-                  </mat-select>
-                </mat-form-field>
+            </mat-select>
+          </mat-form-field>
 
-    
-          
-            <br>
-            <mat-form-field appearance="outline" [style.width.px]=200>
-                <mat-label>Check In</mat-label>
-                <input matInput [matDatepicker]="picker1" formControlName="fromDate">
-                
-                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-                <mat-datepicker #picker1></mat-datepicker>
-              </mat-form-field>          
-              <mat-form-field appearance="outline" [style.width.px]=200>
-                <mat-label>Check Out</mat-label>
-                <input matInput [matDatepicker]="picker2" formControlName="toDate">
-                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-                <mat-datepicker #picker2></mat-datepicker>
-              </mat-form-field>    
-              
-              <br>
 
-            <button (click)="FetchRooms()" type="button" class="btn btn-primary">Search</button>
-              <!--   <a  routerLink="/Serchbutton" class="btn btn-primary btn-block uppercase"  (click)="FetchRooms()" type="button">Search</a> -->
-            </div>
+
+          <br>
+          <mat-form-field appearance="outline" [style.width.px]=200>
+            <mat-label>Check In</mat-label>
+            <input matInput [matDatepicker]="picker1" formControlName="fromDate">
+
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field appearance="outline" [style.width.px]=200>
+            <mat-label>Check Out</mat-label>
+            <input matInput [matDatepicker]="picker2" formControlName="toDate">
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field>
+
+          <br>
+
+          <button (click)="FetchRooms()" type="button" class="btn btn-primary">Search</button>
+          <!--   <a  routerLink="/Serchbutton" class="btn btn-primary btn-block uppercase"  (click)="FetchRooms()" type="button">Search</a> -->
         </div>
+      </div>
     </section>
   </form>
 
 
   <div *ngIf="rooms.length > 0">
-    <app-room-grid [rooms]="rooms" ></app-room-grid>
+    <app-room-grid [rooms]="rooms"></app-room-grid>
+  </div>
+</div>
+
+
+<br>
+
+<div class="container-fluid mx-auto">
+  <div class="row justify-content-center top-part">
+    <div class="col-md-5 text-center center-content">
+      <div class="d-flex-inline">
+        <h3 class="footer-heading">Start to book Rooms with Bookit</h3>
+      </div>
+      <div class="d-flex-inline">
+        <p>Pakistan's leading online ticket booking platform. Buy E-tickets for hotel with discounts and deals.</p>
+      </div>
+      <div class="d-flex-inline pt-2">
+        <button class="btn-pink btn">BOOKIT</button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="line mb-3 mx-auto"></div>
+    <div class="d-md-flex px-5 justify-content-around bd-highlight col-md-12 pt-5 pb-5 mb-3">
+      <div class="p-2 flex-fill bd-highlight mb-5 mb-md-0">
+        <h2>Bookit</h2>
+        <small>Copyright &Copy 2019</small>
+      </div>
+      <div class="p-2 flex-fill bd-highlight mb-3 mb-md-0">
+        <h5 class="places">Pakistan</h5>
+        <p class="mb-0">Karachi</p>
+        <p class="mb-0">lahore</p>
+        <p class="mb-0">Islamabad</p>
+      </div>
+      <div class="p-2 flex-fill bd-highlight mb-3 mb-md-0">
+        <h5 class="places">Citys</h5>
+        <p class="mb-0">Muree</p>
+        <p class="mb-0">multan</p>
+        <p class="mb-0">and may more in pakistan</p>
+      </div>
+      <div class="p-2 flex-fill bd-highlight mb-3 mb-md-0">
+        <h5 class="places">book online</h5>
+        <p class="mb-0"> Buy E-tickets</p>
+        <p class="mb-0"> For hotel</p>
+        <p class="mb-0">All category</p>
+      </div>
+      <div class="p-2 flex-fill bd-highlight mb-3 mb-md-0">
+        <h5 class="places">Rooms Category</h5>
+        <p class="mb-0">Economy</p>
+        <p class="mb-0">Luxury</p>
+        <p class="mb-0">Dulex</p>
+        <p class="mb-0">Parlor</p>
+        <p class="mb-0">Standard</p>
+      </div>
+      <div class="p-2 flex-fill bd-highlight mb-3 mb-md-0">
+        <h5 class="places">Develped by</h5>
+        <p class="mb-0">umer farooq</p>
+        <p>0303-7546074</p>
+        <p>farooqkhan445642@gmail.com</p>
+      </div>
+    </div>
+
   </div>
 </div>
