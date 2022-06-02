@@ -16,7 +16,10 @@
     margin:auto;
     padding: 25px;
     border-radius: 12px;
-    margin-top:15px
+    margin-top:15px;
+  background-repeat: repeat;
+  padding-bottom: 50px;
+
   }
   .singup-full-width {
     width: 100%;
