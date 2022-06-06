@@ -1,46 +1,101 @@
-<div >
-    <div class="col-md-4 offset-md-4 col-8 offset-2">
-        <div class="sinupfrom">
-            <form [formGroup]="signUpForm" class="singup-form">
-                <mat-form-field class="singup-full-width" appearance="outline">
-                    <mat-label>First Name</mat-label>
-                    <input placeholder="First Name" formControlName="firstName" matInput type="text" id="firstName" name="firstName" class="formcontrol" required minlength="4" >
-                  
-         </mat-form-field>
-                <mat-form-field class="singup-full-width"  appearance="outline">
-                    <mat-label>Last Name</mat-label>
-                    <input placeholder="Last Name" formControlName="lastName"  matInput type="text">
-                </mat-form-field>
-                <mat-form-field class="singup-full-width"  appearance="outline">
-                    <mat-label>Address</mat-label>
-                    <input placeholder="Address"  formControlName="address"  matInput appearance="outline">
-                </mat-form-field>
+<div>
+  <div class="col-md-4 offset-md-4 col-8 offset-2">
+    <div class="sinupfrom">
+      <form [formGroup]="signUpForm" class="singup-form">
+        <mat-form-field class="singup-full-width" appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input
+            placeholder="First Name"
+            formControlName="firstName"
+            matInput
+            type="text"
+            id="firstName"
+            name="firstName"
+            class="formcontrol"
+            required
+            minlength="4"
+          />
+        </mat-form-field>
+        <mat-form-field class="singup-full-width" appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input
+            placeholder="Last Name"
+            formControlName="lastName"
+            matInput
+            type="text"
+          />
+        </mat-form-field>
+        <mat-form-field class="singup-full-width" appearance="outline">
+          <mat-label>Address</mat-label>
+          <input
+            placeholder="Address"
+            formControlName="address"
+            matInput
+            appearance="outline"
+          />
+        </mat-form-field>
 
-                <mat-form-field class="singup-full-width"  appearance="outline">
-                    <mat-label>CNIC</mat-label>
-                    <input placeholder="CNIC"  formControlName="cnic"  matInput appearance="outline">
-                </mat-form-field>
+        <mat-form-field class="singup-full-width" appearance="outline">
+          <mat-label>CNIC</mat-label>
+          <input
+            placeholder="CNIC"
+            formControlName="cnic"
+            matInput
+            appearance="outline"
+          />
+        </mat-form-field>
 
-                <mat-form-field class="singup-full-width"  appearance="outline">
-                    <mat-label>Contact</mat-label>
-                    <input placeholder="Contact"  formControlName="contactNumber"  matInput appearance="outline">
-                </mat-form-field>
+        <mat-form-field class="singup-full-width" appearance="outline">
+          <mat-label>Contact</mat-label>
+          <input
+            placeholder="Contact"
+            formControlName="contactNumber"
+            matInput
+            appearance="outline"
+          />
+        </mat-form-field>
 
-                <mat-form-field class="singup-full-width"  appearance="outline">
-                    <mat-label>Email</mat-label>
-                    <input placeholder="Ex.inov@example.com" formControlName="email" name="email" matInput type="email">
-                </mat-form-field>
-                
-                <mat-form-field class="singup-full-width"   appearance="outline">
-                    <mat-label>Password</mat-label>
-                    <input placeholder="*********" formControlName="password"  matInput >
-                </mat-form-field>
-                <mat-form-field class="singup-full-width"  appearance="outline">
-                    <mat-label>Confirm Password</mat-label>
-                    <input placeholder="*********"  formControlName="confirmPassword"  matInput >
-                </mat-form-field>
-                    <a  routerLink="/Login"  mat-raised-button type="button" (click)="Register()">Register</a>
-            </form>
-        </div>
+        <mat-form-field class="singup-full-width" appearance="outline">
+          <mat-label>Email</mat-label>
+          <input
+            placeholder="Ex.inov@example.com"
+            formControlName="email"
+            name="email"
+            matInput
+            type="email"
+          />
+        </mat-form-field>
+
+        <mat-form-field class="singup-full-width" appearance="outline">
+          <mat-label>Password</mat-label>
+          <input
+          (keyup)="MustMatch()"
+          placeholder="*********" formControlName="password" matInput />
+        </mat-form-field>
+        <mat-form-field class="singup-full-width" appearance="outline">
+          <mat-label>Confirm Password</mat-label>
+          <input
+            (keyup)="MustMatch()"
+            placeholder="*********"
+            formControlName="confirmPassword"
+            matInput
+          />
+
+    
+        </mat-form-field>    
+        
+        <div *ngIf="!BothPassword">
+            <span class="text-danger">
+              Password and confirm password need to be same!
+            </span>
+          </div>
+        <a
+          mat-raised-button
+          type="button"
+          (click)="Register()"
+          >Register</a
+        >
+      </form>
     </div>
+  </div>
 </div>

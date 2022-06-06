@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import axios from 'axios';
 import { environment } from 'src/environments/environment';
+import { UserServiceService } from '../user-service.service';
+
+
+
+
 
 import {
   FormGroup,
@@ -8,6 +13,8 @@ import {
   Validators,
   FormBuilder,
 } from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-userprofile',
@@ -37,7 +44,7 @@ export class UserprofileComponent implements OnInit {
 
 
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder , private _userService: UserServiceService) {}
 
   ngOnInit(): void {
     this.GetProfile();
@@ -54,34 +61,37 @@ export class UserprofileComponent implements OnInit {
   }
 
   GetProfile() {
-    axios
-      .get(environment.BaseURL + 'GetAccountByUserId', {
-        params: { userId: localStorage.getItem("Hotel_UserId") },
-      })
-      .then(({ data }) => {
-        console.log(data);
 
-        if (data.responseCode === 200) {
-          var user = data.responseData;
 
-          console.log(user);
-          this.profileURL = environment.ProfileFoto + user.profilePhoto;
+    let result = this._userService.getUserProfile() 
+    
+    result
+    .then(({ data }) => {
+      console.log("data",data);
 
-          this.User_Email = user.email
-          this.EditForm = new FormGroup({
-            user_Id: new FormControl(localStorage.getItem('Hotel_UserId'), [Validators.required]),
-            Address: new FormControl(user.address, [Validators.required]),
-            FirstName: new FormControl(user.firstName, [Validators.required]),
-            LastName: new FormControl(user.lastName, [Validators.required]),
-            Email: new FormControl(user.email, [Validators.required]),
-            Cnic: new FormControl(user.cnic, [Validators.required]),
-            ContactNumber: new FormControl(user.contactNumber, [Validators.required]),
-          });
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+      if (data.responseCode === 200) {
+        var user = data.responseData;
+
+        console.log(user);
+        this.profileURL = environment.ProfileFoto + user.profilePhoto;
+
+        this.User_Email = user.email
+        this.EditForm = new FormGroup({
+          user_Id: new FormControl(localStorage.getItem('Hotel_UserId'), [Validators.required]),
+          Address: new FormControl(user.address, [Validators.required]),
+          FirstName: new FormControl(user.firstName, [Validators.required]),
+          LastName: new FormControl(user.lastName, [Validators.required]),
+          Email: new FormControl(user.email, [Validators.required]),
+          Cnic: new FormControl(user.cnic, [Validators.required]),
+          ContactNumber: new FormControl(user.contactNumber, [Validators.required]),
+        });
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+ 
+
   }
 
   onUpload() {
