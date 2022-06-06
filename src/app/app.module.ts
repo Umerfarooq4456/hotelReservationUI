@@ -32,6 +32,7 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
 import { VerificationcodeComponent } from './verificationcode/verificationcode.component';
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 
 
@@ -50,7 +51,8 @@ const AppRoutes: Routes = [
   { path: 'verificationcode/:email' ,  component: VerificationcodeComponent},
   { path: 'resetpassword/:email' ,  component: ResetpasswordComponent},
   { path: 'loginform' ,  component :LoginComponent},
-  { path: 'userprofile' ,  component :UserprofileComponent}
+  { path: 'userprofile' ,  component :UserprofileComponent},
+  {path : 'homepage' , component :HomepageComponent}
   ]
 
 
@@ -70,6 +72,7 @@ const AppRoutes: Routes = [
     VerificationcodeComponent,
     ResetpasswordComponent,
     UserprofileComponent,
+    HomepageComponent,
   ],
   imports: [
     BrowserModule,
@@ -92,7 +95,6 @@ const AppRoutes: Routes = [
     MatGridListModule,
     MatCardModule,
     NgxMaskModule.forRoot(),
- 
 
   ],
   providers: [],

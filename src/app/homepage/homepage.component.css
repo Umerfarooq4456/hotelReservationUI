@@ -1,0 +1,133 @@
+.stretch-card>.card {
+    width: 100%;
+    min-width: 100%
+}
+
+body {
+    background-color: #f9f9fa
+}
+
+.flex {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto
+}
+
+@media (max-width:991.98px) {
+    .padding {
+        padding: 1.5rem
+    }
+}
+
+@media (max-width:767.98px) {
+    .padding {
+        padding: 1rem
+    }
+}
+
+.padding {
+    padding: 3rem !important
+}
+
+.card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
+    box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
+    border: none;
+    margin-bottom: 30px;
+}
+
+.card .card-header {
+    background-color: transparent;
+    border-bottom: none;
+    padding: 25px 20px;
+}
+
+.card .card-header+.card-block, .card .card-header+.card-block-big {
+    padding-top: 0;
+}
+
+.card-block {
+    padding: 1.25rem;
+    background-color: #fff;
+}
+
+.m-b-20 {
+    margin-bottom: 20px;
+}
+
+.card-sub {
+    cursor: move;
+    border: none;
+    -webkit-box-shadow: 0 0 1px 2px rgba(0,0,0,0.05), 0 -2px 1px -2px rgba(0,0,0,0.04), 0 0 0 -1px rgba(0,0,0,0.05);
+    box-shadow: 0 0 1px 2px rgba(0,0,0,0.05), 0 -2px 1px -2px rgba(0,0,0,0.04), 0 0 0 -1px rgba(0,0,0,0.05);
+}
+
+.card-block {
+    padding: 1.25rem;
+    background-color: #fff;
+}
+
+
+
+
+/* footer css */
+
+
+.mt-0 {
+    margin-top: 0 !important;
+  }
+  
+  
+  body {
+      overflow-x: hidden;
+      color: #fff;
+  }
+  
+  p {
+      font-size: 14px;
+  }
+  
+  .container-fluid {
+      background-color: #f5f5f5!important;
+  }
+  
+  .top-part {
+      background-color: #ececec!important;
+  }
+  
+  .center-content {
+      margin-top: 120px;
+      margin-bottom: 120px;
+  }
+  
+  .btn-pink {
+      border-radius: 0;
+      background-color: #FF4081;
+      color: #fff !important;
+      letter-spacing: 2px;
+      padding: 10px;
+      padding-right: 20px;
+      padding-left: 20px;
+  }
+  
+  .btn-pink:hover {
+      background-color: #F50057;
+  }
+  
+  .line {
+      border-top: 1px solid #7B1FA2;
+      width: 90% !important;
+  }
+  
+  .fa-mobile {
+      font-size: 20px;
+  }
+  
+  #contact {
+      font-size: 15px;
+  }
+  
+  .grey-text {
+      color: lightgrey;
+  }
