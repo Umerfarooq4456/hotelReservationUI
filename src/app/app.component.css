@@ -18,12 +18,15 @@
   .color1 {
     background:ghostwhite;
     font-family: 'Montserrat', sans-serif;
+    z-index: 10;
+  
   }
 
   .navFixed{
     position:fixed;
     top:0;
     box-shadow: 0px 10px 15px black;
+    
     
   }
 
