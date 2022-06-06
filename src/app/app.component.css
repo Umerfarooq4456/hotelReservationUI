@@ -19,6 +19,19 @@
     background:ghostwhite;
     font-family: 'Montserrat', sans-serif;
   }
+
+  .navFixed{
+    position:fixed;
+    top:0;
+    box-shadow: 0px 10px 15px black;
+    
+  }
+
+
+  .mb-homePage{
+    margin-bottom: 5rem !important;
+  }
+
   .mat-toolbar , .at-toolbar-single-row {
     color:black;
       height: 70px;

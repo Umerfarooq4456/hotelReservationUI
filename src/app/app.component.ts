@@ -30,6 +30,13 @@ export class AppComponent {
 
   }
 
+  Logout(){
+
+    console.log("Logging out")
+
+    localStorage.removeItem("Hotel_UserId")
+  }
+
 
 
 }

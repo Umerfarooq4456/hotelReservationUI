@@ -2,7 +2,7 @@
 
 
 <div>
-  <mat-toolbar class="color1 ">
+  <mat-toolbar class="color1 navFixed ">
     <div class="logo1">
     <a routerLink="/homepage" title="bookit - Home" class="nav-link" href="#">
 
@@ -11,7 +11,7 @@
     </a>
   </div>
     <span class="example-spacer"></span>
-<button mat-button type="button" class="btn btn-dark font-italic">Logout</button>
+<a (click)="Logout()" mat-button routerLink="/Login" class="btn btn-dark font-italic">Logout</a>
     <div class="profile">
       <a routerLink="/userprofile">
         <mat-icon class="material-icons color_white">account_circle</mat-icon>
@@ -26,5 +26,7 @@
     </div>
 
   </mat-toolbar>
+ 
 </div>
+<div class="mb-homePage p-2"></div>
 <router-outlet></router-outlet>
