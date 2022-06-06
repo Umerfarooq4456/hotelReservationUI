@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 
@@ -31,7 +31,7 @@ export class RoomdetailComponent implements OnInit {
   }
 
   detail: any | undefined;
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private _router: Router) { }
 
   ngOnInit() {
     this.route.params.subscribe(({ roomId }) => {
@@ -58,7 +58,7 @@ export class RoomdetailComponent implements OnInit {
   }
 
   descriptionUpdate(event : any){
-    this.description = this.description + event.target.value
+    this.description = event.target.value
   }
 
   convert(str: string ) {
@@ -98,6 +98,8 @@ export class RoomdetailComponent implements OnInit {
     axios.post(environment.BaseURL + 'PostBookingRequest', this.BookingDetail)
       .then((booking) => {
         console.log(booking.data);
+
+        this._router.navigate(['mybookings'])
       })
       .catch(function (error) {
         console.log("error in bookking",error);

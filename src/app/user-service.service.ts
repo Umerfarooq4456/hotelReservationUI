@@ -37,5 +37,13 @@ export class UserServiceService {
   }
 
 
+  getImages(){
+
+    var result = axios.get(environment.BaseURL + 'GetImages')
+
+    return result;
+
+  }
+
 
 }

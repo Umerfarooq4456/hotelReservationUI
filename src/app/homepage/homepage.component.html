@@ -1,55 +1,37 @@
-
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <div class="container-fluid" style="padding-bottom: 19px;">
-      <div class="row showBorder">
-  
-        <div class="col-4 showBorder">
-  
-          <div class="row d-flex flex-column">
-          
-            <img class="image" src="https://images.unsplash.com/photo-1611601679655-7c8bc197f0c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80">
-            <img class="image" src="https://media.istockphoto.com/photos/attractive-girl-with-brown-hair-walks-out-of-corporate-building-for-picture-id1349414698?b=1&k=20&m=1349414698&s=170667a&w=0&h=u0loxgUliBtPuXIhMb0NTu4RAEzaV3xjgFCfu6K1Y78=">
-          
-            <img class="image" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fG1vZGVsJTIwZ2lybHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60">
-          </div>
-          
-        </div>
-        <div class="col-4 showBorder">
-          <div class="row d-flex flex-column">
-            <img class="image" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fG1vZGVsJTIwZ2lybHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60">
-          
-            <img class="image" src="https://images.unsplash.com/photo-1611601679655-7c8bc197f0c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80">
-            <img class="image" src="https://media.istockphoto.com/photos/attractive-girl-with-brown-hair-walks-out-of-corporate-building-for-picture-id1349414698?b=1&k=20&m=1349414698&s=170667a&w=0&h=u0loxgUliBtPuXIhMb0NTu4RAEzaV3xjgFCfu6K1Y78=">
-            
-          </div>
-          
-        </div>
-        <div class="col-4 showBorder">
-          <div class="row d-flex flex-column">
-            <img class="image" src="https://media.istockphoto.com/photos/attractive-girl-with-brown-hair-walks-out-of-corporate-building-for-picture-id1349414698?b=1&k=20&m=1349414698&s=170667a&w=0&h=u0loxgUliBtPuXIhMb0NTu4RAEzaV3xjgFCfu6K1Y78=">
-          
-            <img class="image" src="https://images.unsplash.com/photo-1611601679655-7c8bc197f0c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80">
-            <img class="image" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fG1vZGVsJTIwZ2lybHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60">
-          </div>
-          
-        </div>
-  
+<div class="container-fluid" style="padding-bottom: 19px">
+  <div class="row showBorder">
+    <div class="col-4 showBorder">
+      <div class="row d-flex flex-column">
+        <a routerLink="/Reservation">
+          <img
+            *ngFor="let img of images1"
+            class="image"
+            src="{{ img.imageURL }}"
+          />
+        </a>
       </div>
-  
     </div>
-  
-  
-
-  
-  
+    <div class="col-4 showBorder">
+      <div class="row d-flex flex-column">
+        <a routerLink="/Reservation">
+          <img
+            *ngFor="let img of images2.reverse()"
+            class="image"
+            src="{{ img.imageURL }}"
+          />
+        </a>
+      </div>
+    </div>
+    <div class="col-4 showBorder">
+      <div class="row d-flex flex-column">
+        <a routerLink="/Reservation">
+        <img
+          *ngFor="let img of images3.reverse()"
+          class="image"
+          src="{{ img.imageURL }}"
+        />
+       </a>
+      </div>
+    </div>
+  </div>
+</div>
